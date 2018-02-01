@@ -1,0 +1,23 @@
+{
+  "name": "ethereum-claims-registry",
+  "version": "0.0.1",
+  "description": "A repository storing claims issued from any Ethereum account to any other Ethereum account.",
+  "main": "build/contracts/EthereumClaimsRegistry.json",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "ganache-cli": "^6.0.3",
+    "truffle-hdwallet-provider": "^0.0.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uport-project/ethereum-claims-registry"
+  },
+  "author": "",
+  "license": "Apache-2.0"
+}
