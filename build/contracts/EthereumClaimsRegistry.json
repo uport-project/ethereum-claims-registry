@@ -2260,8 +2260,13 @@
       "events": {},
       "links": {},
       "address": "0xc9ed21ffcc88a5072454c43bdfdbbe3430888b19"
+    },
+    "42": {
+      "events": {},
+      "links": {},
+      "address": "0x7ed7ceb55167eb71e775a352111dae44db754c40"
     }
   },
   "schemaVersion": "1.0.1",
-  "updatedAt": "2018-02-01T14:57:23.281Z"
+  "updatedAt": "2018-02-01T15:01:29.428Z"
 }
