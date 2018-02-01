@@ -1,7 +1,8 @@
 pragma solidity 0.4.19;
 
 
-/// @title Ethereum Claims Registry - A repository storing claims issued from any Ethereum account to any other Ethereum account.
+/// @title Ethereum Claims Registry - A repository storing claims issued
+///        from any Ethereum account to any other Ethereum account.
 contract EthereumClaimsRegistry {
 
     mapping(address => mapping(address => mapping(bytes32 => bytes32))) public registry;

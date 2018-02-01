@@ -9,10 +9,12 @@
   "dependencies": {},
   "devDependencies": {
     "ganache-cli": "^6.0.3",
+    "solhint": "^1.1.10",
     "truffle-hdwallet-provider": "^0.0.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "node_modules/.bin/solhint contracts/EthereumClaimsRegistry.sol"
   },
   "repository": {
     "type": "git",
