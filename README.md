@@ -27,6 +27,16 @@ let claimsReg = ClaimsReg.at(EthereumClaimsRegistry.networks[networkId].address)
 ### From solidity
 TODO - add documentation
 
+
+## Contract Deployments
+|Network|Address|
+| --|--|
+|Mainnet (id: 1)|[0xdb55d40684e7dc04655a9789937214b493a2c2c6](https://etherscan.io/address/0xdb55d40684e7dc04655a9789937214b493a2c2c6)|
+|Ropsten (id: 3)|[0x737f53c0cebf0acd1ea591685351b2a8580702a5](https://ropsten.etherscan.io/address/0x737f53c0cebf0acd1ea591685351b2a8580702a5)|
+|Rinkeby (id: 4)|[0xc9ed21ffcc88a5072454c43bdfdbbe3430888b19](https://rinkeby.etherscan.io/address/0xc9ed21ffcc88a5072454c43bdfdbbe3430888b19)|
+|Kovan (id: 42)|[0x7ed7ceb55167eb71e775a352111dae44db754c40](https://kovan.etherscan.io/address/0x7ed7ceb55167eb71e775a352111dae44db754c40)|
+
+
 ## Testing the contracts
 
 Make sure you have truffle installed then simply run:
