@@ -9,6 +9,7 @@
   "dependencies": {},
   "devDependencies": {
     "ganache-cli": "^6.0.3",
+    "ls": "^0.2.1",
     "solhint": "^1.1.10",
     "truffle": "^4.0.6",
     "truffle-hdwallet-provider": "^0.0.3"
