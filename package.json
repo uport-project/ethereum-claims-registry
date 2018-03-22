@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "bluebird": "^3.5.1",
     "ganache-cli": "^6.0.3",
     "ls": "^0.2.1",
     "solhint": "^1.1.10",

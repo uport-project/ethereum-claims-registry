@@ -1,6 +1,8 @@
 const EthereumClaimsRegistry = artifacts.require('EthereumClaimsRegistry')
+const generateDeployTxs = require('../scripts/generateDeployTxs')
+const promisifyAll = require('bluebird').promisifyAll
 
-contract('EthereumClaimsRegistry', accounts => {
+contract('EthereumClaimsRegistry', (accounts, a, b, c) => {
 
   let claimsReg
 
@@ -10,7 +12,15 @@ contract('EthereumClaimsRegistry', accounts => {
   let testVal2 = 'abc456'
 
   before(async () => {
-    claimsReg = await EthereumClaimsRegistry.new()
+    // deploy the pregenerated tx
+    const deployData = generateDeployTxs().EthereumClaimsRegistry
+    web3.eth = promisifyAll(web3.eth)
+    await web3.eth.sendTransactionAsync({from: accounts[0], to: deployData.senderAddress, value: web3.toWei(deployData.costInEther, 'ether')})
+    let txHash = await web3.eth.sendRawTransactionAsync(deployData.rawTx)
+    claimsReg = await EthereumClaimsRegistry.at(deployData.contractAddress)
+
+    const receipt = await web3.eth.getTransactionReceiptAsync(txHash)
+    console.log('Gas used for deployment:', receipt.gasUsed)
   })
 
   it('should set a claim and fire an event', async () => {
