@@ -16,7 +16,7 @@
     "truffle": "^4.0.6"
   },
   "scripts": {
-    "test": "./node_modules/.bin/truffle test",
+    "test": "./node_modules/.bin/truffle compile; ./node_modules/.bin/truffle test",
     "lint": "./node_modules/.bin/solhint contracts/*"
   },
   "repository": {

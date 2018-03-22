@@ -45,7 +45,7 @@ $ truffle test
 ```
 
 ## Deploy contract
-First run
+First run,
 ```
 $ scripts/generateDeployTxs.js
 ```
