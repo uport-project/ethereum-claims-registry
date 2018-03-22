@@ -31,10 +31,10 @@ TODO - add documentation
 ## Contract Deployments
 |Network|Address|
 | --|--|
-|Mainnet (id: 1)|[0xdb55d40684e7dc04655a9789937214b493a2c2c6](https://etherscan.io/address/0xdb55d40684e7dc04655a9789937214b493a2c2c6)|
-|Ropsten (id: 3)|[0x737f53c0cebf0acd1ea591685351b2a8580702a5](https://ropsten.etherscan.io/address/0x737f53c0cebf0acd1ea591685351b2a8580702a5)|
-|Rinkeby (id: 4)|[0xc9ed21ffcc88a5072454c43bdfdbbe3430888b19](https://rinkeby.etherscan.io/address/0xc9ed21ffcc88a5072454c43bdfdbbe3430888b19)|
-|Kovan (id: 42)|[0x7ed7ceb55167eb71e775a352111dae44db754c40](https://kovan.etherscan.io/address/0x7ed7ceb55167eb71e775a352111dae44db754c40)|
+|Mainnet (id: 1)|[0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da](https://etherscan.io/address/0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da)|
+|Ropsten (id: 3)|[0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da](https://ropsten.etherscan.io/address/0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da)|
+|Rinkeby (id: 4)|[0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da](https://rinkeby.etherscan.io/address/0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da)|
+|Kovan (id: 42)|[0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da](https://kovan.etherscan.io/address/0xaca1bcd8d0f5a9bfc95aff331da4c250cd9ac2da)|
 
 
 ## Testing the contracts
@@ -44,3 +44,9 @@ Make sure you have truffle installed then simply run:
 $ truffle test
 ```
 
+## Deploy contract
+First run
+```
+$ scripts/generateDeployTxs.js
+```
+you will get the data needed to deploy as an output from this command. Copy the `senderAddress` and send `cost` amount of ether to this address on the ethereum network you wish to deploy to. Once this tx is confirmed simply send the `rawTx` to the same network. `contractAddress` is the address of the deployed contract. This will be the same on all networks it is deployed to.
