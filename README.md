@@ -7,7 +7,7 @@ The Claim Registry can be used from javascript as well as directly from other co
 ### From javascript
 To use the contract we provide truffle artifacts. Once you require the `uport-identity` module you will get an object containing a versioned index of the uport contracts. You can specify which version you want to user, or just use the latest one. Keep in mind that different versions will be deployed to different addresses.
 ```javascript
-const EthereumClaimsRegistry = require('ethereum-claims-registry')
+const EthereumClaimsRegistry = require('ethereum-claims-registry').registry
 ```
 
  You can use `truffle-contract` to utilize these artifacts.

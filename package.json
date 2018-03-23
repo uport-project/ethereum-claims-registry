@@ -2,7 +2,7 @@
   "name": "ethereum-claims-registry",
   "version": "0.0.1",
   "description": "A repository storing claims issued from any Ethereum account to any other Ethereum account.",
-  "main": "build/contracts/EthereumClaimsRegistry.json",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
