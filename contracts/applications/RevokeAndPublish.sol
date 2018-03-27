@@ -6,12 +6,18 @@ import '../EthereumClaimsRegistry.sol';
 ///        rotating access to publish new data
 contract RevokeAndPublish {
 
+    event Revocation(
+        address indexed genesis,
+        address indexed to,
+        uint updatedAt);
+
     mapping(address => address) public manager;
     EthereumClaimsRegistry registry = EthereumClaimsRegistry(0xAcA1BCd8D0f5A9BFC95aFF331Da4c250CD9ac2Da);
 
     function revokeAndPublish(address genesis, bytes32 key, bytes32 data, address newManager) public {
         publish(genesis, key, data);
         manager[genesis] = newManager;
+        Revocation(genesis, newManager, now);
     }
 
     /// @dev Publish some data
