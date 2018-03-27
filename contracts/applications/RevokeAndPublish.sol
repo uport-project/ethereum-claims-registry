@@ -8,6 +8,7 @@ contract RevokeAndPublish {
 
     event Revocation(
         address indexed genesis,
+        address indexed from,
         address indexed to,
         uint updatedAt);
 
@@ -16,8 +17,8 @@ contract RevokeAndPublish {
 
     function revokeAndPublish(address genesis, bytes32 key, bytes32 data, address newManager) public {
         publish(genesis, key, data);
+        Revocation(genesis, manager[genesis], newManager, now);
         manager[genesis] = newManager;
-        Revocation(genesis, newManager, now);
     }
 
     /// @dev Publish some data

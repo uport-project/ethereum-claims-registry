@@ -58,6 +58,7 @@ contract('RevokeAndPublish', accounts => {
 
     let event = tx.logs[0].args
     assert.equal(event.genesis, accounts[0])
+    assert.equal(event.from, '0x0000000000000000000000000000000000000000')
     assert.equal(event.to, accounts[1])
   })
 
@@ -97,6 +98,7 @@ contract('RevokeAndPublish', accounts => {
 
     let event = tx.logs[0].args
     assert.equal(event.genesis, accounts[0])
+    assert.equal(event.from, accounts[1])
     assert.equal(event.to, accounts[2])
   })
 
