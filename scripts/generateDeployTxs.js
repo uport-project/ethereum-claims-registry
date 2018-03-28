@@ -6,7 +6,7 @@ const ls = require('ls')
 
 const gasLimits = {
   EthereumClaimsRegistry: 505467,
-  //RevokeAndPublish: 537460
+  RevokeAndPublish: 568515
 }
 
 generateDeployTx = (code, name) => {
