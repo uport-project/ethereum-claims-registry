@@ -20,7 +20,7 @@ contract('EthereumClaimsRegistry', (accounts, a, b, c) => {
     claimsReg = await EthereumClaimsRegistry.at(deployData.contractAddress)
 
     const receipt = await web3.eth.getTransactionReceiptAsync(txHash)
-    console.log('Gas used for deployment:', receipt.gasUsed)
+    //console.log('Gas used for deployment:', receipt.gasUsed)
   })
 
   it('should set a claim and fire an event', async () => {

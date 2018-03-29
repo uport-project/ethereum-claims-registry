@@ -2,7 +2,7 @@
   "name": "ethereum-claims-registry",
   "version": "0.0.1",
   "description": "A repository storing claims issued from any Ethereum account to any other Ethereum account.",
-  "main": "build/contracts/EthereumClaimsRegistry.json",
+  "main": "index.js",
   "directories": {
     "test": "test"
   },
@@ -16,7 +16,7 @@
     "truffle": "^4.0.6"
   },
   "scripts": {
-    "test": "./node_modules/.bin/truffle test",
+    "test": "./node_modules/.bin/truffle compile; ./node_modules/.bin/truffle test",
     "lint": "./node_modules/.bin/solhint contracts/*"
   },
   "repository": {
