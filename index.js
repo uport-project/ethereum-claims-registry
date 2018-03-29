@@ -1,6 +1,6 @@
 module.exports = {
   registry: require('./build/contracts/EthereumClaimsRegistry.json'),
-  extensions: {
+  applications: {
     RevokeAndPublish: require('./build/contracts/RevokeAndPublish.json'),
   }
 }
