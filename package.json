@@ -1,6 +1,6 @@
 {
   "name": "ethereum-claims-registry",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "A repository storing claims issued from any Ethereum account to any other Ethereum account.",
   "main": "index.js",
   "directories": {
